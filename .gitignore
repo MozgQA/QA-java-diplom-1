@@ -23,16 +23,11 @@
 hs_err_pid*
 
 
-.idea/
-.git/
+.idea/*
+.git/*
 
 
 # Игнорируем всё содержимое jacoco, кроме index.html
-target/site/jacoco/*
-!target/site/jacoco/index.html
-
-target/maven-archiver/
-target/maven-status/
-target/surefire-reports
-target/jacoco.exec
+target/*
+!target/site/
 
