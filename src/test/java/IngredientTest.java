@@ -18,11 +18,12 @@ public class IngredientTest {
         this.price = price;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тип: {0}, Название: {1}, Цена: {2}")
     public static Object[][] getData() {
         return new Object[][] {
-                {IngredientType.SAUCE, "Петр", 1.8F},
-                {IngredientType.FILLING, "Екатерина", 2.6F}
+                {IngredientType.SAUCE, "Соус томатный", 1.8F},
+                {IngredientType.FILLING, "Сыр моцарелла", 2.6F},
+                {IngredientType.SAUCE, "Соус чесночный", 2.0F}
         };
     }
 
@@ -32,6 +33,7 @@ public class IngredientTest {
         IngredientType actualResult = ingredient.getType();
         Assert.assertEquals(type, actualResult);
     }
+
     @Test
     public void testGetName() {
         Ingredient ingredient = new Ingredient(type, name, price);
